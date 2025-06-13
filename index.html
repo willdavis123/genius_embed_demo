@@ -5,13 +5,15 @@
   <title>Genius Sports NCAA Basketball</title>
   <style>
     html, body {
-      margin: 0; padding: 0; height: 100%;
+      margin: 0;
+      padding: 0;
+      height: 100%;
       font-family: 'Segoe UI', Tahoma, sans-serif;
-      background-color: #FCFCFC; /* light Dover background */
-      color: #000A12; /* dark text */
+      background-color: #FCFCFC;
+      color: #000A12;
     }
 
-    /* HEADER CHROME */
+    /* HEADER */
     .app-header {
       background-color: #1565C0; /* Genius Blue */
       color: white;
@@ -19,20 +21,49 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
+
     .app-header h1 {
       font-size: 1.25rem;
       margin: 0;
       font-weight: 600;
     }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
     .nav-links a {
       color: white;
       text-decoration: none;
       font-size: 0.9rem;
       margin-left: 1.5rem;
+      transition: color 0.2s ease;
     }
+
     .nav-links a:hover {
       text-decoration: underline;
+    }
+
+    /* CONTACT SALES BUTTON */
+    .nav-links a.contact-btn {
+      background-color: white;
+      color: #1565C0;
+      padding: 0.4rem 0.8rem;
+      margin-left: 2rem;
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 2px solid white;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .nav-links a.contact-btn:hover {
+      background-color: #e3f2fd;
+      color: #0d47a1;
     }
 
     /* TABS */
@@ -40,60 +71,87 @@
       display: flex;
       background-color: #FCFCFC;
       padding: 0.5rem 1rem 0;
-      border-bottom: 2px solid #3A3D40; /* Sophia 800 */
+      border-bottom: 2px solid #3A3D40;
     }
+
     .tab {
       padding: 0.6rem 1.2rem;
       margin-right: 0.5rem;
-      background-color: #BBDEFB; /* Ocean Light */
+      background-color: #BBDEFB;
       border-radius: 6px 6px 0 0;
       font-weight: 500;
       cursor: pointer;
       color: #000A12;
     }
+
     .tab.active {
       background-color: white;
       border: 1px solid #3A3D40;
       border-bottom: none;
     }
 
-    /* IFRAME CONTAINER */
+    /* EMBED WRAPPER */
     .iframe-wrapper {
-      height: calc(100% - 120px); /* accommodate header + tabs */
-      border: 1px solid #3A3D40; /* Sophia 800 for contrast */
+      height: calc(100% - 120px);
+      border: 1px solid #3A3D40;
       border-top: none;
     }
+
     iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
+
+    @media (max-width: 768px) {
+      .app-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .nav-links a {
+        margin-left: 0;
+      }
+
+      .nav-links a.contact-btn {
+        margin-left: 0;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- HEADER -->
   <div class="app-header">
     <h1>Genius Sports Dashboard</h1>
     <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Reports</a>
-      <a href="#">Insights</a>
+      <a href="#">Products</a>
+      <a href="https://www.geniussports.com/sports-teams-leagues/" target="_blank">Solutions</a>
+      <a href="#">GeniusIQ</a>
+      <a href="#">Customers</a>
+      <a href="#">Learn</a>
+      <a href="#">Company</a>
+      <a href="https://www.geniussports.com/contact-sales/" target="_blank" class="contact-btn">Contact Sales</a>
     </div>
   </div>
 
-  <!-- Tabs -->
+  <!-- VISUAL TABS -->
   <div class="tab-bar">
     <div class="tab active">NCAA Basketball</div>
     <div class="tab">Other Sports</div>
     <div class="tab">Settings</div>
   </div>
 
-  <!-- Embed wrapper -->
+  <!-- SIGMA EMBED -->
   <div class="iframe-wrapper">
-    <!-- YOUR EMBED — unchanged -->
-    <iframe src="https://app.sigmacomputing.com/embed/3W50VkpQOzh1MX4zg68mbS"
-            frameborder="0" width="100%" height="100%"></iframe>
+    <iframe src="https://app.sigmacomputing.com/embed/3W50VkpQOzh1MX4zg68mbS" frameborder="0"></iframe>
   </div>
 
 </body>
