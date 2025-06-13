@@ -5,69 +5,64 @@
   <title>Genius Sports NCAA Basketball</title>
   <style>
     html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: sans-serif;
-      background-color: #f5f6fa;
+      margin: 0; padding: 0; height: 100%;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #FCFCFC; /* light Dover background */
+      color: #000A12; /* dark text */
     }
 
-    /* HEADER STYLES */
+    /* HEADER CHROME */
     .app-header {
-      background-color: #1e1e2f;
+      background-color: #1565C0; /* Genius Blue */
       color: white;
       padding: 1rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-
     .app-header h1 {
       font-size: 1.25rem;
       margin: 0;
+      font-weight: 600;
     }
-
-    .nav-links {
-      display: flex;
-      gap: 1rem;
-    }
-
     .nav-links a {
       color: white;
       text-decoration: none;
       font-size: 0.9rem;
+      margin-left: 1.5rem;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
     }
 
-    /* TABS BAR (VISUAL ONLY) */
+    /* TABS */
     .tab-bar {
       display: flex;
-      background-color: #ffffff;
+      background-color: #FCFCFC;
       padding: 0.5rem 1rem 0;
-      border-bottom: 2px solid #ccc;
+      border-bottom: 2px solid #3A3D40; /* Sophia 800 */
     }
-
     .tab {
-      padding: 0.5rem 1rem;
+      padding: 0.6rem 1.2rem;
       margin-right: 0.5rem;
-      background-color: #eaeaea;
-      border-top-left-radius: 6px;
-      border-top-right-radius: 6px;
+      background-color: #BBDEFB; /* Ocean Light */
+      border-radius: 6px 6px 0 0;
+      font-weight: 500;
       cursor: pointer;
+      color: #000A12;
     }
-
     .tab.active {
       background-color: white;
-      border: 1px solid #ccc;
+      border: 1px solid #3A3D40;
       border-bottom: none;
     }
 
-    /* EMBEDDED FRAME WRAPPER */
+    /* IFRAME CONTAINER */
     .iframe-wrapper {
-      height: calc(100% - 120px); /* adjust based on header + tabs height */
-      border: 1px solid #ccc;
+      height: calc(100% - 120px); /* accommodate header + tabs */
+      border: 1px solid #3A3D40; /* Sophia 800 for contrast */
       border-top: none;
     }
-
     iframe {
       width: 100%;
       height: 100%;
@@ -77,9 +72,9 @@
 </head>
 <body>
 
-  <!-- CUSTOM HEADER -->
+  <!-- Header -->
   <div class="app-header">
-    <h1>🏀 Genius Sports Dashboard</h1>
+    <h1>Genius Sports Dashboard</h1>
     <div class="nav-links">
       <a href="#">Home</a>
       <a href="#">Reports</a>
@@ -87,17 +82,18 @@
     </div>
   </div>
 
-  <!-- VISUAL TABS -->
+  <!-- Tabs -->
   <div class="tab-bar">
     <div class="tab active">NCAA Basketball</div>
     <div class="tab">Other Sports</div>
     <div class="tab">Settings</div>
   </div>
 
-  <!-- IFRAME WRAPPER: styled to look like a content pane -->
+  <!-- Embed wrapper -->
   <div class="iframe-wrapper">
-    <!-- EXISTING EMBED — DO NOT TOUCH -->
-    <iframe src="https://app.sigmacomputing.com/embed/3W50VkpQOzh1MX4zg68mbS" frameborder="0"></iframe>
+    <!-- YOUR EMBED — unchanged -->
+    <iframe src="https://app.sigmacomputing.com/embed/3W50VkpQOzh1MX4zg68mbS"
+            frameborder="0" width="100%" height="100%"></iframe>
   </div>
 
 </body>
